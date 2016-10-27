@@ -29,8 +29,6 @@
       nginx_default_sites:
       - lms
       - cms
-    - mysql
-    - edxlocal
     - mongo
     - { role: 'rabbitmq', rabbitmq_ip: '127.0.0.1' }
     - edxapp

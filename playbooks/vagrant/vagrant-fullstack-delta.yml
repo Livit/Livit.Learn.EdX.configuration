@@ -12,7 +12,7 @@
     EDXAPP_OAUTH_ENFORCE_SECURE: false
     EDXAPP_LMS_BASE_SCHEME: http
     EDXAPP_MONGO_HOSTS: ['mongo']
-    EDXAPP_MYSQL_HOST: 'staging-edx.cd8vpdwrz60w.us-east-1.rds.amazonaws.com'
+    EDXAPP_MYSQL_HOST: 'edx-prod-encrypted.cd8vpdwrz60w.us-east-1.rds.amazonaws.com'
     EDXAPP_MYSQL_CSMH_HOST: "{{ EDXAPP_MYSQL_HOST }}"
     XQUEUE_MYSQL_HOST: "{{ EDXAPP_MYSQL_HOST }}"
     ORA_MYSQL_HOST: "{{ EDXAPP_MYSQL_HOST }}"
