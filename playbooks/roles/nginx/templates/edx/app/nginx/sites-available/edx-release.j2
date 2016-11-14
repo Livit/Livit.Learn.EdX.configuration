@@ -1,6 +1,10 @@
 server {
     listen 8099 default_server;
 
+    location ~ /\. {
+        deny all;
+    }
+
     location = /versions.html {
         alias {{ nginx_cfg.version_html }};
     }

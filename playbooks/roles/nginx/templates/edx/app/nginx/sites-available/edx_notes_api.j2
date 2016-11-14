@@ -7,6 +7,10 @@ upstream {{ edx_notes_api_service_name }}_app_server {
 server {
   listen {{ edx_notes_api_nginx_port }} default_server;
 
+  location ~ /\. {
+    deny all;
+  }
+
   location / {
     try_files $uri @proxy_to_app;
   }

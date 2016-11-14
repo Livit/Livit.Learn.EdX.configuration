@@ -7,6 +7,10 @@ upstream insights_app_server {
 server {
   listen {{ INSIGHTS_NGINX_PORT }} default_server;
 
+  location ~ /\. {
+    deny all;
+  }
+
   location ~ ^/static/(?P<file>.*) {
     root {{ COMMON_DATA_DIR }}/{{ insights_service_name }};
     try_files /staticfiles/$file =404;
