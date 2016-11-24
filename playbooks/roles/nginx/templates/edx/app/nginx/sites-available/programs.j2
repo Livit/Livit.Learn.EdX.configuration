@@ -51,6 +51,10 @@ server {
   }
   {% endif %}
 
+  location ~ /\. {
+    deny all;
+  }
+
   location ~ ^/static/(?P<file>.*) {
     root {{ COMMON_DATA_DIR }}/{{ programs_service_name }};
     try_files /staticfiles/$file =404;

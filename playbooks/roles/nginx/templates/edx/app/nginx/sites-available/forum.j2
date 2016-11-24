@@ -36,6 +36,10 @@ server {
   client_max_body_size 1M;
   keepalive_timeout 5;
 
+  location ~ /\. {
+    deny all;
+  }
+
   location / {
     try_files $uri @proxy_to_app;
   }

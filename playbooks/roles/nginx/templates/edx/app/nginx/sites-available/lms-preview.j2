@@ -20,6 +20,10 @@ server {
 
   rewrite ^(.*)/favicon.ico$ /static/images/favicon.ico last;
 
+  location ~ /\. {
+    deny all;
+  }
+
   location @proxy_to_lms-preview_app {
     {% if NGINX_SET_X_FORWARDED_HEADERS %}
     proxy_set_header X-Forwarded-Proto $scheme;
