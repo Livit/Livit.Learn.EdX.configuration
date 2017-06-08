@@ -29,10 +29,8 @@
       nginx_default_sites:
       - lms
       - cms
-    - mysql
     - edxlocal
     - memcache
-    - mongo
     - { role: 'rabbitmq', rabbitmq_ip: '127.0.0.1' }
     - edxapp
     - { role: 'edxapp', celery_worker: True }
