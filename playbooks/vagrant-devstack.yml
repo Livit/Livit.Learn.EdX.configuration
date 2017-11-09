@@ -3,6 +3,8 @@
   become: True
   gather_facts: True
   vars:
+    edx_platform_repo: "https://github.com/Livit/Livit.Learn.EdX.git"
+    edx_ansible_source_repo: "https://github.com/Livit/Livit.Learn.EdX.configuration.git"
     migrate_db: 'yes'
     devstack: true
     disable_edx_services: true
@@ -25,10 +27,6 @@
     - edxapp
     - oraclejdk
     - elasticsearch
-    - forum
-    - ecommerce
-    - ecomworker
-    - programs
     - role: notifier
       NOTIFIER_DIGEST_TASK_INTERVAL: "5"
     - browsers
